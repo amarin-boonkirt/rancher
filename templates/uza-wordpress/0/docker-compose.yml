@@ -3,7 +3,10 @@ wordpress:
   links:
     - wordpress_db:mysql
   ports:
-    - ${wp_public_port}:80
+    - ${wp_public_port}:${wp_private_port}
+  environment:    
+    VIRTUAL_HOST: ${domain_name}
+    VIRTUAL_PORT: ${wp_private_port}
 
 wordpress_db:
   image: mariadb
@@ -18,3 +21,4 @@ phpmyadmin:
   environment:
     MYSQL_USERNAME: root
     MYSQL_ROOT_PASSWORD: ${mysql_root_pass}
+    

@@ -11,6 +11,12 @@
       required: true
       default: "80"
       type: "int"
+    - variable: wp_private_port
+      description: "private port"
+      label: "Wordpress Private Port"
+      required: true
+      default: "8080"
+      type: "int"      
     - variable: phpmyadmin_public_port
       description: "public port to access the phpmyadmin"
       label: "phpMyAdmin Public Port"
