@@ -4,7 +4,13 @@
   description: "Blog tool, publishing platform and CMS"
   uuid: Wordpress-0
   minimum_rancher_version: v0.51.0
-  questions:    
+  questions:
+    - variable: domain_name
+      description: "domain name"
+      label: "domain name"
+      required: true
+      default: ""
+      type: "string"    
     - variable: wp_public_port
       description: "public port to access the wordpress site"
       label: "Wordpress Public Port"
