@@ -7,7 +7,6 @@ wordpress:
   environment:    
     VIRTUAL_HOST: ${domain_name}
     VIRTUAL_PORT: ${wp_private_port}
-
 wordpress_db:
   image: mariadb
   environment:
