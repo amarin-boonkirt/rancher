@@ -1,20 +1,20 @@
 wordpress:
   image: wordpress
   links:
-    - wordpress_db:mysql
+    - wordpressdb:mysql
   ports:
     - ${wp_public_port}:${wp_private_port}
   environment:    
     VIRTUAL_HOST: ${domain_name}
     VIRTUAL_PORT: ${wp_private_port}
-wordpress_db:
+wordpressdb:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: ${mysql_root_pass}
 phpmyadmin:
   image: corbinu/docker-phpmyadmin
   links:
-    - wordpress_db:mysql
+    - wordpressdb:mysql
   ports:
     - ${phpmyadmin_public_port}:80
   environment:
