@@ -4,11 +4,8 @@ wordpress:
     - wordpressdb:mysql
   ports:
     - ${wp_public_port}:${wp_private_port}
-  expose: 
-    - ${wp_private_port}    
   environment:    
     - "VIRTUAL_HOST=${domain_name}"
-    - "VIRTUAL_PORT=${wp_private_port}"
 wordpressdb:
   image: mariadb
   environment:
