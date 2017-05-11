@@ -1,6 +1,6 @@
 nginx-proxy:
   image: jwilder/nginx-proxy
   ports:
-    - "$nginx_public_port}:80"
+    - "${nginx_public_port}:80"
   volumes:
     - /var/run/docker.sock:/tmp/docker.sock
