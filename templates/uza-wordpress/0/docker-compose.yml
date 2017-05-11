@@ -2,6 +2,8 @@ wordpress:
   image: wordpress
   links:
     - wordpressdb:mysql
+  ports:
+    - ${wp_public_port}:${wp_private_port}
   expose: 
     - ${wp_private_port}    
   environment:    
