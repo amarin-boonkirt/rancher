@@ -15,19 +15,19 @@
       description: "public port to access the wordpress site"
       label: "Wordpress Public Port"
       required: true
-      default: "80"
+      default: "8080"
       type: "int"
     - variable: wp_private_port
       description: "private port"
       label: "Wordpress Private Port"
       required: true
-      default: "8080"
+      default: "80"
       type: "int"      
     - variable: phpmyadmin_public_port
       description: "public port to access the phpmyadmin"
       label: "phpMyAdmin Public Port"
       required: true
-      default: "81"
+      default: "8081"
       type: "int"
     - variable: mysql_root_pass
       description: "mysql root password"
