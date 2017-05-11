@@ -1,0 +1,13 @@
+.catalog:
+  name: "Nginx as a reverse-proxy"
+  version: "v0.1-educaas1"
+  description: "Nginx as a reverse-proxy"
+  uuid: Nginx-0
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: nginx_public_port
+      description: "nginx_public_port"
+      label: "Nginx Public Port"
+      required: true
+      default: "80"
+      type: "int"

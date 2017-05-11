@@ -1,0 +1,5 @@
+name: Nginx as a reverse-proxy
+description: |
+  Nginx as a reverse-proxy
+version: v0.1-educaas1
+category: Load Balancing

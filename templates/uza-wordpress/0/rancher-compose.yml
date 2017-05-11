@@ -1,0 +1,28 @@
+.catalog:
+  name: "Wordpress"
+  version: "v0.1-educaas1"
+  description: "Blog tool, publishing platform and CMS"
+  uuid: Wordpress-0
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: wp_public_port
+      description: "public port to access the wordpress site"
+      label: "Wordpress Public Port"
+      required: true
+      default: "80"
+      type: "int"
+    - variable: phpmyadmin_public_port
+      description: "public port to access the phpmyadmin"
+      label: "phpMyAdmin Public Port"
+      required: true
+      default: "81"
+      type: "int"
+    - variable: mysql_root_pass
+      description: "mysql root password"
+      label: "MySQL root password"
+      required: true
+      default: "examplepass"
+      type: "string"
+
+
+wordpress:
